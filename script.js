@@ -85,6 +85,10 @@ function initEnquiryForm() {
     status.toggleAttribute("data-error", isError);
   };
 
+  form.addEventListener("input", (e) => {
+    if (e.target.hasAttribute("aria-invalid")) e.target.removeAttribute("aria-invalid");
+  });
+
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     const data = new FormData(form);

@@ -173,22 +173,35 @@ h1,h2,h3,p,figure,blockquote,dl,dd{margin:0}
 .trust dt{font-weight:800;font-size:1.5rem}
 .trust dd{color:var(--ash);margin-top:.25rem;max-width:32rem}
 .quotes-note{margin-top:var(--s5);font-weight:400}
-.quotes{display:grid;gap:var(--s3);margin-top:var(--s2)}
-.quotes figure{background:var(--graphite);border-top:4px solid var(--lime);padding:var(--s3)}
-.quotes p{font-size:1.25rem;line-height:1.35;font-weight:500}
-.quotes figcaption{margin-top:var(--s2);color:var(--ash);font-size:.9rem}
-@media (min-width:56rem){.quotes{grid-template-columns:repeat(3,1fr)}}
+.reviews{display:grid;gap:var(--s3);margin-top:var(--s2)}
+.review{display:flex;flex-direction:column;gap:var(--s2);background:var(--graphite);border-top:4px solid var(--lime);padding:var(--s3)}
+.review__tag{align-self:flex-start;padding:.2rem .6rem;border:1px solid var(--line);border-radius:2rem;font-size:.8rem;font-weight:600;color:var(--ash)}
+.stars{display:flex;gap:.2rem;color:var(--lime)}
+.stars svg{width:1.15rem;height:1.15rem;fill:currentColor}
+.stars .off{fill:none;stroke:currentColor;stroke-width:1.5;opacity:.5}
+.review blockquote{flex:1}
+.review p{font-size:1.15rem;line-height:1.4;font-weight:500}
+.review .review__tag{font-size:.8rem;font-weight:600;line-height:1.4}
+.review footer{display:grid;gap:.1rem;font-size:.95rem}
+.review footer span{color:var(--ash)}
+@media (min-width:56rem){.reviews{grid-template-columns:repeat(3,1fr)}}
 #visit{border-top:1px solid var(--line)}
 
-/* Visit and form */
-.visit{display:grid;gap:var(--s5)}
-.hours{width:100%;margin:var(--s3) 0;border-collapse:collapse}
-.hours th,.hours td{padding:.75rem 0;border-bottom:1px solid var(--line);text-align:left}
-.hours td{text-align:right}
+/* Visit: map column + info/form column */
+.visit{display:grid;gap:var(--s4);margin-top:var(--s4)}
+.visit__info{display:grid;gap:var(--s4);align-content:start}
+.visit__h{font-size:1.5rem;font-weight:800;line-height:1.1}
+.hours{width:100%;margin-top:var(--s1);border-collapse:collapse}
+.hours th,.hours td{padding:.75rem 0;border-bottom:1px solid var(--line);text-align:left;font-weight:400}
+.hours th{font-weight:600}
+.hours td{text-align:right;white-space:nowrap}
 .hours tr[aria-current="date"] th,.hours tr[aria-current="date"] td{color:var(--lime);font-weight:700}
-address{font-style:normal;margin-bottom:var(--s3)}
+address{font-style:normal;margin-top:var(--s1)}
 address a{color:var(--lime)}
-.map{display:grid;place-items:center;aspect-ratio:16/9;background:var(--graphite);border:1px dashed var(--line);color:var(--ash)}
+.map{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--s1);min-height:16rem;aspect-ratio:4/3;background-color:var(--graphite);background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:2.25rem 2.25rem;border:1px solid var(--line)}
+.map svg{width:2.75rem;height:2.75rem;color:var(--lime)}
+.map span{padding:.4rem .9rem;background:var(--ink);color:var(--bone);font-weight:600}
+.visit__map iframe{display:block;width:100%;aspect-ratio:4/3;border:0}
 .form{display:grid;gap:var(--s2);align-content:start;padding:var(--s3);background:var(--graphite);scroll-margin-top:var(--header-h)}
 .form label{display:grid;gap:.35rem;font-weight:600}
 .form input,.form select,.form textarea{width:100%;padding:.8rem;background:var(--ink);color:var(--bone);border:2px solid var(--line);border-radius:.25rem;font:inherit}
@@ -196,7 +209,12 @@ address a{color:var(--lime)}
 .form [aria-invalid="true"]{border-color:#ff6b5e}
 .status{min-height:1.5rem;font-weight:600}
 .status[data-error]{color:#ff8a80}
-@media (min-width:56rem){.visit{grid-template-columns:1fr 1fr;gap:var(--s5);align-items:start}.form{padding:var(--s4)}}
+@media (min-width:56rem){
+  .visit{grid-template-columns:5fr 6fr;gap:var(--s5);align-items:start}
+  .visit__map{position:sticky;top:calc(var(--header-h) + var(--s3))}
+  .map,.visit__map iframe{aspect-ratio:4/5}
+  .form{padding:var(--s4)}
+}
 
 /* Footer */
 .footer{border-top:1px solid var(--line);padding:var(--s5) 0 var(--s4)}

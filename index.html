@@ -23,6 +23,7 @@
     <path d="M33 33H7" stroke="currentColor" stroke-width="5" stroke-linecap="round" fill="none"/>
     <path d="M20 5 33 33" stroke="var(--lime)" stroke-width="5" stroke-linecap="round" fill="none"/>
   </symbol>
+  <symbol id="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></symbol>
 </svg>
 
 <header class="site-header" data-header>
@@ -222,48 +223,83 @@
           <div><dt>Coaching approach</dt><dd>Explain how inductions, programming and progress reviews really work at your gym.</dd></div>
         </dl>
       </div>
-      <h3 class="quotes-note fine">Demo content: replace these with real, permitted member reviews before launch.</h3>
-      <div class="quotes">
-        <figure><blockquote><p>Sample quote about feeling welcome on the gym floor.</p></blockquote><figcaption>Sample testimonial: replace before launch</figcaption></figure>
-        <figure><blockquote><p>Sample quote about clear coaching and steady progress.</p></blockquote><figcaption>Sample testimonial: replace before launch</figcaption></figure>
-        <figure><blockquote><p>Sample quote about sleep, food and training fitting together.</p></blockquote><figcaption>Sample testimonial: replace before launch</figcaption></figure>
+      <p class="quotes-note fine">Demo content: these are sample reviews with placeholder names and ratings. Replace them with real, permitted member reviews before launch.</p>
+      <!-- To add a real review: copy one <article class="review">, set the member's name, optional plan, rating (stars) and their own words. -->
+      <div class="reviews">
+        <article class="review">
+          <p class="review__tag">Demo testimonial</p>
+          <div class="stars" role="img" aria-label="Sample rating: 5 out of 5"><svg class="" aria-hidden="true"><use href="#star"/></svg><svg class="" aria-hidden="true"><use href="#star"/></svg><svg class="" aria-hidden="true"><use href="#star"/></svg><svg class="" aria-hidden="true"><use href="#star"/></svg><svg class="" aria-hidden="true"><use href="#star"/></svg></div>
+          <blockquote><p>Sample review: I felt welcome from my first visit, and the induction explained everything clearly.</p></blockquote>
+          <footer><strong>Sample Member A</strong><span>Starter plan</span></footer>
+        </article>
+        <article class="review">
+          <p class="review__tag">Demo testimonial</p>
+          <div class="stars" role="img" aria-label="Sample rating: 4 out of 5"><svg class="" aria-hidden="true"><use href="#star"/></svg><svg class="" aria-hidden="true"><use href="#star"/></svg><svg class="" aria-hidden="true"><use href="#star"/></svg><svg class="" aria-hidden="true"><use href="#star"/></svg><svg class="off" aria-hidden="true"><use href="#star"/></svg></div>
+          <blockquote><p>Sample review: the progress check-ins helped me keep showing up week after week.</p></blockquote>
+          <footer><strong>Sample Member B</strong><span>Core plan</span></footer>
+        </article>
+        <article class="review">
+          <p class="review__tag">Demo testimonial</p>
+          <div class="stars" role="img" aria-label="Sample rating: 5 out of 5"><svg class="" aria-hidden="true"><use href="#star"/></svg><svg class="" aria-hidden="true"><use href="#star"/></svg><svg class="" aria-hidden="true"><use href="#star"/></svg><svg class="" aria-hidden="true"><use href="#star"/></svg><svg class="" aria-hidden="true"><use href="#star"/></svg></div>
+          <blockquote><p>Sample review: coaching check-ins made training, food and rest feel like one plan.</p></blockquote>
+          <footer><strong>Sample Member C</strong><span>Complete plan</span></footer>
+        </article>
       </div>
     </div>
   </section>
 
   <section class="section" id="visit" aria-labelledby="visit-h">
-    <div class="wrap visit">
-      <div>
-        <h2 class="display h2" id="visit-h">Come and see the gym</h2>
-        <table class="hours">
-          <caption class="sr">Opening hours (sample)</caption>
-          <tbody data-hours>
-            <tr data-days="1,2,3,4,5"><th scope="row">Monday to Friday</th><td>05:30 to 22:00</td></tr>
-            <tr data-days="6"><th scope="row">Saturday</th><td>07:00 to 19:00</td></tr>
-            <tr data-days="0"><th scope="row">Sunday</th><td>08:00 to 17:00</td></tr>
-          </tbody>
-        </table>
-        <address>
-          Street address, City, Postcode<br>
-          <a href="tel:+000000000000">+00 0000 000000</a><br>
-          <a href="mailto:hello@example.com">hello@example.com</a>
-        </address>
-        <div class="map" role="img" aria-label="Map placeholder">Embed your map here</div>
+    <div class="wrap">
+      <h2 class="display h2" id="visit-h">Come and see the gym</h2>
+      <div class="visit">
+        <div class="visit__map">
+          <!-- Add a real map only once you have a genuine gym address: replace the .map div with
+               <iframe src="YOUR_MAP_EMBED_URL" title="Map to TRIAD Fitness" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+          <div class="map" role="img" aria-label="Map placeholder: add your map here">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>
+            <span>Embed your map here</span>
+          </div>
+        </div>
+        <div class="visit__info">
+          <div>
+            <h3 class="visit__h">Opening hours</h3>
+            <p class="fine">Sample timings until the actual hours are confirmed.</p>
+            <table class="hours">
+              <caption class="sr">Opening hours (sample)</caption>
+              <!-- Edit the times here. data-days uses 0 = Sunday to 6 = Saturday and drives the "today" highlight. -->
+              <tbody data-hours>
+                <tr data-days="1,2,3,4,5"><th scope="row">Monday to Friday</th><td>05:30 AM – 10:00 PM</td></tr>
+                <tr data-days="6"><th scope="row">Saturday</th><td>07:00 AM – 07:00 PM</td></tr>
+                <tr data-days="0"><th scope="row">Sunday</th><td>08:00 AM – 05:00 PM</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <h3 class="visit__h">Contact</h3>
+            <p class="fine">Placeholder details, not verified business information.</p>
+            <address>
+              Street address, City, Postcode<br>
+              <a href="tel:+000000000000">+00 0000 000000</a><br>
+              <a href="mailto:hello@example.com">hello@example.com</a>
+            </address>
+          </div>
+          <form class="form" id="enquire" novalidate data-form aria-labelledby="enq-h">
+            <h3 class="display h3" id="enq-h">Book a free visit</h3>
+            <!-- Name and email are prefilled and editable. Remove the value attributes to start empty. -->
+            <label>Name<input name="name" autocomplete="name" value="Gaurav Katarpawar" required aria-describedby="enq-status"></label>
+            <label>Email<input name="email" type="email" autocomplete="email" value="katarpawargaurav99@gmail.com" required aria-describedby="enq-status"></label>
+            <label>I'm interested in
+              <select name="interest">
+                <option>Membership</option><option>Starter plan</option><option>Core plan</option><option>Complete plan</option><option>Exercise</option><option>Nutrition</option><option>Sleep</option>
+              </select>
+            </label>
+            <label>Message (optional)<textarea name="message" rows="3"></textarea></label>
+            <button class="btn btn--lime" type="submit">Send enquiry</button>
+            <p class="fine">This opens your email app with the message ready to send. Nothing is sent until you press send there.</p>
+            <p class="status" id="enq-status" role="status" data-status></p>
+          </form>
+        </div>
       </div>
-      <form class="form" id="enquire" novalidate data-form aria-labelledby="enq-h">
-        <h3 class="display h3" id="enq-h">Book a free visit</h3>
-        <label>Name<input name="name" autocomplete="name" required></label>
-        <label>Email<input name="email" type="email" autocomplete="email" required></label>
-        <label>I'm interested in
-          <select name="interest">
-            <option>Membership</option><option>Starter plan</option><option>Core plan</option><option>Complete plan</option><option>Exercise</option><option>Nutrition</option><option>Sleep</option>
-          </select>
-        </label>
-        <label>Message (optional)<textarea name="message" rows="3"></textarea></label>
-        <button class="btn btn--lime" type="submit">Send enquiry</button>
-        <p class="fine">This opens your email app with the message ready to send.</p>
-        <p class="status" role="status" data-status></p>
-      </form>
     </div>
   </section>
 </main>
