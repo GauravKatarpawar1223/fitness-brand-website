@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TRIAD Fitness | Exercise, nutrition and sleep</title>
+  <meta name="description" content="A gym built on three habits: train well, eat well, recover well. Book a free visit.">
+  <meta name="theme-color" content="#141414">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 4 4 27h24z' fill='none' stroke='%23c6ff1a' stroke-width='4' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- SVG logo defined once, reused with <use>. Three strokes make a triangle: exercise, nutrition, sleep. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="mark" viewBox="0 0 40 40">
+    <path d="M20 5 7 33" stroke="currentColor" stroke-width="5" stroke-linecap="round" fill="none"/>
+    <path d="M33 33H7" stroke="currentColor" stroke-width="5" stroke-linecap="round" fill="none"/>
+    <path d="M20 5 33 33" stroke="var(--lime)" stroke-width="5" stroke-linecap="round" fill="none"/>
+  </symbol>
+</svg>
+
+<header class="site-header" data-header>
+  <div class="wrap bar">
+    <a class="logo" href="#top" aria-label="TRIAD Fitness, home">
+      <svg class="logo__mark" aria-hidden="true"><use href="#mark"/></svg>
+      <span class="logo__word">Triad</span>
+    </a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-btn>
+      <span class="menu-btn__label">Menu</span><span class="menu-btn__icon" aria-hidden="true"></span>
+    </button>
+    <nav id="site-nav" class="nav" aria-label="Main">
+      <ul>
+        <li><a href="#pillars">Training</a></li>
+        <li><a href="#benefits">Benefits</a></li>
+        <li><a href="#plans">Plans</a></li>
+        <li><a href="#coaches">Coaches</a></li>
+        <li><a href="#visit">Visit</a></li>
+      </ul>
+      <a class="btn btn--lime" href="#enquire">Book a free visit</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <!-- HERO: headline overlaps the photo on desktop so type and image read as one composition. -->
+  <section class="hero" id="top">
+    <div class="wrap hero__grid">
+      <h1 class="display hero__title rise" style="--i:0">Get in the best shape of your life.</h1>
+      <figure class="media hero__media rise" style="--i:1" data-fallback="Add athlete photo (with permission)">
+        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1400&q=70"
+             alt="Person lifting weights in a gym" width="1400" height="1750" fetchpriority="high">
+      </figure>
+      <div class="hero__copy rise" style="--i:2">
+        <p class="lede">Build strength. Fuel your body. Recover better. Feel confident in everyday life.</p>
+        <div class="actions">
+          <a class="btn btn--lime" href="#enquire">Book a free visit</a>
+          <a class="btn btn--ghost" href="#plans">Compare plans</a>
+        </div>
+        <p class="fine">Progress looks different for everyone. We help you build habits you can keep.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PILLARS: staggered grid so the three cards read as a rhythm, not a row of clones. -->
+  <section class="section" id="pillars" aria-labelledby="pillars-h">
+    <div class="wrap">
+      <h2 class="display h2" id="pillars-h">Train. Eat. Rest.</h2>
+      <p class="intro">Fitness is built across the whole day, not just the hour on the gym floor. Each pillar supports the others.</p>
+      <div class="pillars">
+        <article class="pillar">
+          <figure class="media" data-fallback="Exercise">
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1000&q=70" alt="Barbells and weight plates on a gym floor" width="1000" height="700" loading="lazy">
+          </figure>
+          <h3 class="display h3">Exercise</h3>
+          <p>Strength equipment, clear coaching and a plan that fits your week. Show up consistently and we help you progress.</p>
+          <a class="link" href="#enquire" data-interest="Exercise">Ask about training</a>
+        </article>
+        <article class="pillar">
+          <figure class="media" data-fallback="Nutrition">
+            <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1000&q=70" alt="Bowl of fresh vegetables, grains and protein" width="1000" height="700" loading="lazy">
+          </figure>
+          <h3 class="display h3">Nutrition</h3>
+          <p>Balanced meals and practical food guidance for real routines, without extreme rules.</p>
+          <a class="link" href="#enquire" data-interest="Nutrition">Ask about nutrition</a>
+        </article>
+        <article class="pillar">
+          <figure class="media" data-fallback="Sleep">
+            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1000&q=70" alt="Calm bedroom with soft evening light" width="1000" height="700" loading="lazy">
+          </figure>
+          <h3 class="display h3">Sleep</h3>
+          <p>Recovery is where training pays off. Learn simple sleep habits and rest routines that last.</p>
+          <a class="link" href="#enquire" data-interest="Sleep">Ask about recovery</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="benefits" aria-labelledby="benefits-h">
+    <div class="wrap split">
+      <div>
+        <h2 class="display h2" id="benefits-h">Results vary. Habits compound.</h2>
+        <p class="intro">Everyone starts somewhere different, so we focus on what you can build and keep.</p>
+      </div>
+      <ul class="benefits">
+        <li><h3>Strength</h3><p>Lift with good technique and add load gradually, at a pace your body can handle.</p></li>
+        <li><h3>Confidence</h3><p>Know what you are doing on the floor, and carry that into daily life.</p></li>
+        <li><h3>Energy</h3><p>Regular movement, steady meals and better sleep can all support how you feel through the day.</p></li>
+        <li><h3>Consistency</h3><p>Simple plans and regular check-ins make showing up easier week after week.</p></li>
+        <li><h3>Wellbeing</h3><p>Training, food and rest working together for a routine that feels sustainable.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="plans" aria-labelledby="plans-h">
+    <div class="wrap">
+      <div class="plans-head">
+        <h2 class="display h2" id="plans-h">Pick a plan</h2>
+        <div class="billing">
+          <span id="bill-m">Monthly</span>
+          <button class="switch" type="button" role="switch" aria-checked="false" aria-labelledby="bill-label" data-billing><span class="switch__dot"></span></button>
+          <span id="bill-a">Annual</span>
+          <span id="bill-label" class="sr">Annual billing</span>
+        </div>
+      </div>
+      <p class="fine">Sample prices. Replace with your real pricing before launch.</p>
+      <div class="plans">
+        <article class="plan">
+          <h3 class="display h3">Starter</h3>
+          <p class="price"><span data-monthly="$29" data-annual="$25">$29</span><small>/month</small></p>
+          <ul class="ticks">
+            <li>Gym floor, off-peak hours</li>
+            <li>Welcome induction</li>
+            <li class="no"><span class="sr">Not included: </span>Group classes</li>
+            <li class="no"><span class="sr">Not included: </span>Nutrition guidance</li>
+            <li class="no"><span class="sr">Not included: </span>Coach check-ins</li>
+          </ul>
+          <a class="btn btn--ghost" href="#enquire" data-interest="Membership">Enquire about Starter</a>
+        </article>
+        <article class="plan plan--main">
+          <h3 class="display h3">Core</h3>
+          <p class="price"><span data-monthly="$49" data-annual="$42">$49</span><small>/month</small></p>
+          <ul class="ticks">
+            <li>Gym floor, all opening hours</li>
+            <li>Welcome induction</li>
+            <li>Group classes</li>
+            <li>Nutrition guidance</li>
+            <li class="no"><span class="sr">Not included: </span>Coach check-ins</li>
+          </ul>
+          <a class="btn btn--lime" href="#enquire" data-interest="Membership">Enquire about Core</a>
+        </article>
+        <article class="plan">
+          <h3 class="display h3">Complete</h3>
+          <p class="price"><span data-monthly="$69" data-annual="$59">$69</span><small>/month</small></p>
+          <ul class="ticks">
+            <li>Gym floor, all opening hours</li>
+            <li>Welcome induction</li>
+            <li>Group classes</li>
+            <li>Nutrition guidance</li>
+            <li>Monthly coach check-in</li>
+          </ul>
+          <a class="btn btn--ghost" href="#enquire" data-interest="Membership">Enquire about Complete</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="coaches" aria-labelledby="coaches-h">
+    <div class="wrap">
+      <h2 class="display h2" id="coaches-h">Your coaches</h2>
+      <p class="intro">Placeholder profiles. Swap in each coach's photo, name and verified qualifications.</p>
+      <div class="coaches">
+        <article class="coach">
+          <div class="coach__ph" aria-hidden="true"><svg viewBox="0 0 80 80"><circle cx="40" cy="30" r="14"/><path d="M12 76c2-18 14-26 28-26s26 8 28 26z"/></svg></div>
+          <h3>Coach name</h3><p class="role">Strength coach</p>
+          <ul><li>Qualification: add certifying body and level</li><li>Experience: add years and focus areas</li></ul>
+        </article>
+        <article class="coach">
+          <div class="coach__ph" aria-hidden="true"><svg viewBox="0 0 80 80"><circle cx="40" cy="30" r="14"/><path d="M12 76c2-18 14-26 28-26s26 8 28 26z"/></svg></div>
+          <h3>Coach name</h3><p class="role">Nutrition coach</p>
+          <ul><li>Qualification: add certifying body and level</li><li>Experience: add years and focus areas</li></ul>
+        </article>
+        <article class="coach">
+          <div class="coach__ph" aria-hidden="true"><svg viewBox="0 0 80 80"><circle cx="40" cy="30" r="14"/><path d="M12 76c2-18 14-26 28-26s26 8 28 26z"/></svg></div>
+          <h3>Coach name</h3><p class="role">Recovery and mobility coach</p>
+          <ul><li>Qualification: add certifying body and level</li><li>Experience: add years and focus areas</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="trust" aria-labelledby="trust-h">
+    <div class="wrap split">
+      <div>
+        <h2 class="display h2" id="trust-h">What you can check for yourself</h2>
+        <p class="intro">Visit, ask questions, meet the coaches. Only publish what you can prove.</p>
+      </div>
+      <dl class="trust">
+        <div><dt>Credentials</dt><dd>List real, verifiable coaching certifications and first-aid training here.</dd></div>
+        <div><dt>Facilities</dt><dd>Describe your actual equipment, floor space, changing rooms and accessibility.</dd></div>
+        <div><dt>Coaching approach</dt><dd>Explain how inductions, programming and progress reviews really work at your gym.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="voices" aria-labelledby="voices-h">
+    <div class="wrap">
+      <h2 class="display h2" id="voices-h">Member voices</h2>
+      <p class="fine">Sample content. Replace with real, permitted reviews.</p>
+      <div class="quotes">
+        <figure><blockquote><p>Sample quote about feeling welcome on the gym floor.</p></blockquote><figcaption>Sample member</figcaption></figure>
+        <figure><blockquote><p>Sample quote about clear coaching and steady progress.</p></blockquote><figcaption>Sample member</figcaption></figure>
+        <figure><blockquote><p>Sample quote about sleep, food and training fitting together.</p></blockquote><figcaption>Sample member</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="visit" aria-labelledby="visit-h">
+    <div class="wrap visit">
+      <div>
+        <h2 class="display h2" id="visit-h">Come and see the gym</h2>
+        <table class="hours">
+          <caption class="sr">Opening hours (sample)</caption>
+          <tbody data-hours>
+            <tr data-days="1,2,3,4,5"><th scope="row">Monday to Friday</th><td>05:30 to 22:00</td></tr>
+            <tr data-days="6"><th scope="row">Saturday</th><td>07:00 to 19:00</td></tr>
+            <tr data-days="0"><th scope="row">Sunday</th><td>08:00 to 17:00</td></tr>
+          </tbody>
+        </table>
+        <address>
+          Street address, City, Postcode<br>
+          <a href="tel:+000000000000">+00 0000 000000</a><br>
+          <a href="mailto:hello@example.com">hello@example.com</a>
+        </address>
+        <div class="map" role="img" aria-label="Map placeholder">Embed your map here</div>
+      </div>
+      <form class="form" id="enquire" novalidate data-form aria-labelledby="enq-h">
+        <h3 class="display h3" id="enq-h">Book a free visit</h3>
+        <label>Name<input name="name" autocomplete="name" required></label>
+        <label>Email<input name="email" type="email" autocomplete="email" required></label>
+        <label>I'm interested in
+          <select name="interest">
+            <option>Membership</option><option>Exercise</option><option>Nutrition</option><option>Sleep</option>
+          </select>
+        </label>
+        <label>Message (optional)<textarea name="message" rows="3"></textarea></label>
+        <button class="btn btn--lime" type="submit">Send enquiry</button>
+        <p class="fine">This opens your email app with the message ready to send.</p>
+        <p class="status" role="status" data-status></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <div>
+      <a class="logo" href="#top" aria-label="TRIAD Fitness, back to top"><svg class="logo__mark" aria-hidden="true"><use href="#mark"/></svg><span class="logo__word">Triad</span></a>
+      <p class="fine">Exercise, nutrition and sleep, together.</p>
+    </div>
+    <nav aria-label="Footer"><ul><li><a href="#pillars">Training</a></li><li><a href="#plans">Plans</a></li><li><a href="#coaches">Coaches</a></li><li><a href="#visit">Visit</a></li></ul></nav>
+    <!-- Replace with your real profile URLs -->
+    <ul aria-label="Social links">
+      <li><a href="https://www.instagram.com/" rel="noopener">Instagram</a></li>
+      <li><a href="https://www.facebook.com/" rel="noopener">Facebook</a></li>
+      <li><a href="https://www.youtube.com/" rel="noopener">YouTube</a></li>
+    </ul>
+  </div>
+  <p class="wrap fine">Demo brand. Content is placeholder until replaced. Seek medical advice before starting a new exercise or nutrition programme.</p>
+</footer>
+</body>
+</html>
